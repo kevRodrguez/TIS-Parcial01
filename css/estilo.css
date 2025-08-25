@@ -312,7 +312,7 @@ body {
 
 .anio-pelicula {
     color: var(--gris-claro-netflix);
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: 400;
     margin-left: 1rem;
 }
@@ -552,11 +552,9 @@ footer {
 
 /* Tarjetas de películas */
 .tarjeta-pelicula {
-    background: var(--gradiente-card);
+    background: var(--negro-netflix);
     border-radius: 20px;
-    box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.1),
-        0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(61, 61, 61, 0.2);
     overflow: hidden;
 }
 
