@@ -248,6 +248,285 @@ body {
     animation-delay: 0.3s;
 }
 
+/* ============================================
+   ESTILOS PARA PÁGINAS DE PELÍCULAS
+   ============================================ */
+
+/* Navegación */
+.navbar-brand {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+/* Tarjeta de película */
+.tarjeta-pelicula {
+    background: rgba(47, 47, 47, 0.4);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tarjeta-pelicula:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.imagen-pelicula-detalle {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.imagen-pelicula-detalle:hover {
+    transform: scale(1.02);
+}
+
+/* Calificaciones */
+.calificacion-contenedor {
+    background: rgba(31, 31, 31, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--rojo-netflix);
+}
+
+.calificacion-imdb,
+.calificacion-rotten {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Detalles de película */
+.detalles-pelicula {
+    padding: 1rem;
+}
+
+.titulo-pelicula {
+    color: var(--blanco-netflix);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.anio-pelicula {
+    color: var(--gris-claro-netflix);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+/* Información básica */
+.informacion-basica {
+    background: rgba(47, 47, 47, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--dorado-netflix);
+}
+
+.info-item {
+    color: var(--blanco-netflix);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.info-item strong {
+    color: var(--dorado-netflix);
+    margin-right: 0.5rem;
+}
+
+/* Secciones */
+.seccion-titulo {
+    color: var(--blanco-netflix);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--rojo-netflix);
+    display: flex;
+    align-items: center;
+}
+
+.sinopsis-contenedor {
+    background: rgba(31, 31, 31, 0.4);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sinopsis-texto {
+    color: var(--gris-claro-netflix);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Reparto */
+.reparto-contenedor {
+    background: rgba(47, 47, 47, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--rojo-netflix);
+}
+
+.lista-reparto {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-reparto li {
+    color: var(--gris-claro-netflix);
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease;
+}
+
+.lista-reparto li:hover {
+    color: var(--blanco-netflix);
+}
+
+.lista-reparto strong {
+    color: var(--dorado-netflix);
+}
+
+/* Equipo técnico */
+.equipo-tecnico {
+    background: rgba(31, 31, 31, 0.4);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Curiosidades */
+.curiosidades {
+    background: rgba(47, 47, 47, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--dorado-netflix);
+}
+
+.lista-curiosidades {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-curiosidades li {
+    color: var(--gris-claro-netflix);
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: rgba(31, 31, 31, 0.5);
+    border-radius: 8px;
+    border-left: 3px solid var(--rojo-netflix);
+    position: relative;
+}
+
+.lista-curiosidades li::before {
+    content: "💡";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--negro-netflix);
+    padding: 0.25rem;
+    border-radius: 50%;
+}
+
+/* Botones de acción */
+.acciones-pelicula {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(31, 31, 31, 0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animaciones específicas para películas */
+@keyframes deslizarDesdeIzquierda {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes deslizarDesdeDerecha {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.tarjeta-pelicula {
+    animation: deslizarDesdeIzquierda 0.8s ease-out;
+}
+
+.detalles-pelicula {
+    animation: deslizarDesdeDerecha 0.8s ease-out;
+}
+
+/* Responsive para páginas de películas */
+@media (max-width: 768px) {
+    .titulo-pelicula {
+        font-size: 2rem;
+    }
+
+    .anio-pelicula {
+        font-size: 1.4rem;
+        display: block;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .sinopsis-texto {
+        font-size: 1rem;
+    }
+
+    .informacion-basica .row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .titulo-pelicula {
+        font-size: 1.6rem;
+    }
+
+    .tarjeta-pelicula,
+    .detalles-pelicula {
+        padding: 1rem;
+    }
+
+    .seccion-titulo {
+        font-size: 1.3rem;
+    }
+}
+
 /* ========================================
    ESTILOS PARA EL ÍNDICE DE PELÍCULAS
    ======================================== */
