@@ -8,6 +8,12 @@
     --rojo-netflix: #e50914;
     --rojo-netflix-hover: #f40612;
     --dorado-netflix: #ffd700;
+
+    /* Variables adicionales para el índice */
+    --gradiente-fondo: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+    --gradiente-titulo: linear-gradient(135deg, #e50914 0%, #ff4757 50%, #ff6b6b 100%);
+    --gradiente-card: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+    --gradiente-movie-title: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
 }
 
 /* Estilos base generales */
@@ -240,4 +246,109 @@ body {
 
 .bloque-informacion:nth-child(3) {
     animation-delay: 0.3s;
+}
+
+/* ========================================
+   ESTILOS PARA EL ÍNDICE DE PELÍCULAS
+   ======================================== */
+
+/* Fuente Poppins para el índice */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilo del body para páginas de índice */
+.tema-indice-peliculas {
+    background: var(--gradiente-fondo);
+    background-attachment: fixed;
+    color: #333;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    font-weight: 300;
+}
+
+/* Título principal del índice */
+.titulo-indice-principal {
+    color: var(--rojo-netflix);
+    background: var(--gradiente-titulo);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 8px rgba(229, 9, 20, 0.3);
+}
+
+/* Tarjetas de películas */
+.tarjeta-pelicula {
+    background: var(--gradiente-card);
+    border-radius: 20px;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.1),
+        0 4px 12px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+/* Imágenes de películas */
+.imagen-pelicula {
+    border-radius: 15px 15px 0 0;
+    border: none;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Títulos de películas */
+.titulo-pelicula {
+    color: #ffffff;
+    background: var(--gradiente-movie-title);
+    background-clip: text;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+/* Cuerpo de la tarjeta */
+.cuerpo-tarjeta-pelicula {
+    padding: 1.8rem 1.5rem 1.5rem 1.5rem;
+}
+
+/* Override Bootstrap para cards del índice */
+.card-indice {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Diseño responsivo para el índice */
+@media (max-width: 768px) {
+    .titulo-indice-principal {
+        font-size: 2.2rem !important;
+    }
+
+    .tarjeta-pelicula {
+        margin: 0 1rem;
+    }
+
+    .imagen-pelicula {
+        height: 280px;
+    }
+
+    .titulo-pelicula {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .titulo-indice-principal {
+        font-size: 1.8rem !important;
+    }
+
+    .cuerpo-tarjeta-pelicula {
+        padding: 1.2rem 1rem;
+    }
+
+    .imagen-pelicula {
+        height: 250px;
+    }
 }
